@@ -4,6 +4,7 @@
   "description": "Node.js application to obtain some data from [**Wikipedia mobile**](https://en.m.wikipedia.org/wiki/Main_Page) and show them in a web page.",
   "main": "app.js",
   "scripts": {
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
