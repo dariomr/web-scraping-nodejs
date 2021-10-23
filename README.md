@@ -10,5 +10,6 @@ Node.js application to obtain some data from [**Wikipedia mobile**](https://en.m
 ## Installation
 **Application requires [Node.js](https://nodejs.org/) to run**
 ```
-npm install express ejs axios cheerio --save
+npm install 
+npm start
 ```
