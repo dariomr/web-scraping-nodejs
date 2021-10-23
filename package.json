@@ -1,0 +1,26 @@
+{
+  "name": "web-scraping-nodejs",
+  "version": "1.0.0",
+  "description": "Node.js application to obtain some data from [**Wikipedia mobile**](https://en.m.wikipedia.org/wiki/Main_Page) and show them in a web page.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dariomr/web-scraping-nodejs.git"
+  },
+  "keywords": [],
+  "author": "@dariomr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dariomr/web-scraping-nodejs/issues"
+  },
+  "homepage": "https://github.com/dariomr/web-scraping-nodejs#readme",
+  "dependencies": {
+    "axios": "^0.23.0",
+    "cheerio": "^1.0.0-rc.10",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1"
+  }
+}
