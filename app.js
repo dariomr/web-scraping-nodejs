@@ -14,11 +14,16 @@ app.use(express.json());
 app.set('view engine','ejs');
 app.use(express.static('./public'));
 
+// Application adapted to get data from dogs breeds from Wikipedia Mobile in Spanish
 const urls = new Array("https://es.m.wikipedia.org/wiki/Affenpinscher",
                        "https://es.m.wikipedia.org/wiki/D%C3%B3berman",
                        "https://es.m.wikipedia.org/wiki/B%C3%B3xer",
                        "https://es.m.wikipedia.org/wiki/Saluki",
-                       "https://es.m.wikipedia.org/wiki/Pit_bull_terrier_americano");
+                       "https://es.m.wikipedia.org/wiki/Pit_bull_terrier_americano",
+                       "https://es.m.wikipedia.org/wiki/Beagle",
+                       "https://es.m.wikipedia.org/wiki/Labrador_retriever",
+                       "https://es.m.wikipedia.org/wiki/Golden_retriever",
+                       "https://es.m.wikipedia.org/wiki/Pastor_alem%C3%A1n");
                        
 let data = new Array(); // [String, [Array]] - [title, [texts]]
 const delay = ms => new Promise(res => setTimeout(res, ms));
