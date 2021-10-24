@@ -29,7 +29,7 @@ app.listen(8080,()=>{
 
 app.get('/',async (req,res) => {
     main();
-    await delay(1000);
+    await delay(2000);
     res.render('index', {datos: data});
 })
 
@@ -45,10 +45,10 @@ function getData() {
         urls.forEach(async url => {
             const response = await axios.get(url);
             const document = cheerio.load(response.data);
-
             const texts = new Array();
             let title = document("#section_0").text();
-
+            let image = document("#mf-section-0 > table > tbody > tr:nth-child(2) > td > a > img").attr("src");
+            await delay(100);
             for (let i = 0; i < 11; i++) {
                 let text = document(`#mf-section-0 > p:nth-child(${i})`).text();
                 if (!(text == "" || text == " ")) {
@@ -59,7 +59,7 @@ function getData() {
                 }
             }
             await delay(200);
-            data.push({ 'title':title, 'texts':texts });
+            data.push({ 'title':title, 'texts':texts, 'image':image});
         });
     } catch (error) {
         console.error(error);
